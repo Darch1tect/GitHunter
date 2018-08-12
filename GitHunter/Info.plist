@@ -41,5 +41,30 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>github.com</key>
+			<dict>
+				<key>NSIncludeSubdomains</key>
+				<true/>
+			</dict>
+			<key>api.github.com</key>
+			<dict>
+				<key>NSIncludeSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>Endpoint</key>
+	<dict>
+		<key>headers</key>
+		<dict/>
+		<key>name</key>
+		<string>$(ENVIRONMENT_NAME)</string>
+		<key>base</key>
+		<string>$(HOST_NAME)</string>
+	</dict>
 </dict>
 </plist>
