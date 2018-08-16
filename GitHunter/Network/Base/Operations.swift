@@ -26,6 +26,7 @@ open class DataOperation<ResponseProtocol>: OperationProtocol {
             }
             service.execute(req, retry: retry).then({ dataResponse -> Promise<ResponseProtocol> in
                 let x: ResponseProtocol = dataResponse as! ResponseProtocol
+                seal.fulfill(x)
                 return .value(x)
             }).catch({ error in
                 print("Unexpected response error")

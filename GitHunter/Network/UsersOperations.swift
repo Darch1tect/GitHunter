@@ -18,5 +18,13 @@ public class LoadUsers: JSONOperation<[UserModel]> {
             return UserModel.load(list: json.arrayValue)
         }
     }
+
+}
+
+public class LoadImage: DataOperation<ResponseProtocol> {
     
+    public init(from url: String) {
+        super.init()
+        self.request = Request(method: .get, endpoint: "")
+    }
 }

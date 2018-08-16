@@ -13,14 +13,14 @@ public struct UserModel {
     let id: Int
     let loginUrlString: String
     let avatarUrlString: String
-    let profileURLString: String
+    let profileUrlString: String
     
     public init?(_ json: JSON) {
         guard let id = json["id"].int else { return nil }
         self.id = id
         self.loginUrlString = json["login"].stringValue
         self.avatarUrlString = json["avatar_url"].stringValue
-        self.profileURLString = json["html_url"].stringValue
+        self.profileUrlString = json["html_url"].stringValue
     }
     
     public static func load(list: [JSON]) -> [UserModel] {
