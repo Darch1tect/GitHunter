@@ -16,7 +16,6 @@ protocol UsersManagerObserving: class {
 final class UserManager {
     
     var loadedUsers: [UserModel] = []
-    var pagesCount: Int = 0
     
     static let shared = UserManager()
     
@@ -29,9 +28,9 @@ final class UserManager {
     public func loadPage() {
         let cfg = ServiceConfiguration.appConfig()
         let service = Service(cfg!)
-        _ = LoadUsers.init(from: pagesCount+1, perPage: 30).execute(in: service, retry: 1).done { newLoadedUsers in
+        let lastLoadedUserId = loadedUsers.last?.id ?? 0
+        _ = LoadUsers.init(since: lastLoadedUserId, perPage: 30).execute(in: service, retry: 1).done { newLoadedUsers in
             self.loadedUsers += newLoadedUsers
-            self.pagesCount += 1
             print(newLoadedUsers)
             self.delegate?.didReceiveDataUpdate()
         }

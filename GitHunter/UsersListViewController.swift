@@ -41,4 +41,12 @@ extension UsersListViewController: UITableViewDataSource {
     }
 }
 
+extension UsersListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if (indexPath.row == userManager.loadedUsers.count - 1) {
+            userManager.loadPage()
+        }
+    }
+}
 

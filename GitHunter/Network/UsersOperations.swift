@@ -10,9 +10,9 @@ import Foundation
 
 public class LoadUsers: JSONOperation<[UserModel]> {
     
-    public init(from startPage: Int, perPage: Int) {
+    public init(since userId: Int, perPage: Int) {
         super.init()
-        let fields: ParametersDict = ["page" : startPage, "per_page" : perPage]
+        let fields: ParametersDict = ["since" : userId, "per_page" : perPage]
         self.request = Request(method: .get, endpoint: "/users", fields: fields)
         self.onParseResponse = { json in
             return UserModel.load(list: json.arrayValue)
