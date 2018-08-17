@@ -107,19 +107,35 @@
 			isa = PBXGroup;
 			children = (
 				711E33EE2120C3CA00455E6B /* AppDelegate.swift */,
-				711E33F02120C3CA00455E6B /* UsersListViewController.swift */,
-				712B1E632125D11C006493BC /* FollowersListViewController.swift */,
-				711E33F22120C3CA00455E6B /* Main.storyboard */,
-				7123A0FD2121DF0C00DBA08E /* UserCell.swift */,
+				712B1E672126C226006493BC /* ViewControllers */,
+				712B1E682126C240006493BC /* Views */,
 				714393C12120F84F007C9CE4 /* Network */,
-				71E08E402120F4C100E4330F /* Commons.swift */,
 				714393D62121937E007C9CE4 /* Models */,
 				71E08E412120F4C100E4330F /* Extensions.swift */,
+				71E08E402120F4C100E4330F /* Commons.swift */,
 				711E33F52120C3CB00455E6B /* Assets.xcassets */,
 				711E33F72120C3CB00455E6B /* LaunchScreen.storyboard */,
 				711E33FA2120C3CB00455E6B /* Info.plist */,
 			);
 			path = GitHunter;
+			sourceTree = "<group>";
+		};
+		712B1E672126C226006493BC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				711E33F02120C3CA00455E6B /* UsersListViewController.swift */,
+				712B1E632125D11C006493BC /* FollowersListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		712B1E682126C240006493BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				711E33F22120C3CA00455E6B /* Main.storyboard */,
+				7123A0FD2121DF0C00DBA08E /* UserCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		714393C12120F84F007C9CE4 /* Network */ = {
