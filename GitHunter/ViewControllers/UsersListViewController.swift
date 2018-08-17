@@ -17,6 +17,7 @@ final class UsersListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Git users"
         userManager.delegate = self
         userManager.loadPage()
     }
