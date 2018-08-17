@@ -50,11 +50,6 @@
 				<key>NSIncludeSubdomains</key>
 				<true/>
 			</dict>
-			<key>api.github.com</key>
-			<dict>
-				<key>NSIncludeSubdomains</key>
-				<true/>
-			</dict>
 			<key>avatars2.githubusercontent.com</key>
 			<dict>
 				<key>NSIncludeSubdomains</key>

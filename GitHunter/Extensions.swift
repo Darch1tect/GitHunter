@@ -38,7 +38,7 @@ public extension String {
     
     /// Fill up a string by replacing values in specified placeholders
     ///
-    /// - Parameter dict: dict to use
+    /// - Parameter : dict to use
     /// - Returns: replaced string
     public func fill(withValues dict: [String: Any?]?) -> String {
         guard let data = dict else {

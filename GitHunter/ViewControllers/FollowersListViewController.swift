@@ -11,6 +11,8 @@ import UIKit
 final class FollowersListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView?
+    @IBOutlet weak var loadingView: UIView?
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView?
     
     var followersModel: FollowersListModel!
     
@@ -21,6 +23,8 @@ final class FollowersListViewController: UIViewController {
     override func viewDidLoad() {
         self.title = "\(followersModel.targetUser.loginUrlString)'s followers"
         followersModel.delegate = self
+        loadingView?.isHidden = false
+        activityIndicator?.startAnimating()
     }
     
 }
@@ -41,5 +45,7 @@ extension FollowersListViewController: FollowersObserving {
     
     func followersUpdated() {
         tableView?.reloadData()
+        activityIndicator?.stopAnimating()
+        loadingView?.isHidden = true
     }
 }
