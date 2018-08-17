@@ -16,6 +16,7 @@ protocol UsersManagerObserving: class {
 final class UserManager {
     
     var loadedUsers: [UserModel] = []
+    var selectedUser: UserModel?
     
     static let shared = UserManager()
     
@@ -31,7 +32,6 @@ final class UserManager {
         let lastLoadedUserId = loadedUsers.last?.id ?? 0
         _ = LoadUsers.init(since: lastLoadedUserId, perPage: 30).execute(in: service, retry: 1).done { newLoadedUsers in
             self.loadedUsers += newLoadedUsers
-            print(newLoadedUsers)
             self.delegate?.didReceiveDataUpdate()
         }
     }

@@ -14,6 +14,8 @@
 		711E33F92120C3CB00455E6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 711E33F72120C3CB00455E6B /* LaunchScreen.storyboard */; };
 		7123A0FE2121DF0C00DBA08E /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7123A0FD2121DF0C00DBA08E /* UserCell.swift */; };
 		7123A1002122E62100DBA08E /* UsersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7123A0FF2122E62100DBA08E /* UsersManager.swift */; };
+		712B1E642125D11C006493BC /* FollowersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712B1E632125D11C006493BC /* FollowersListViewController.swift */; };
+		712B1E662125D6FB006493BC /* FollowersListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712B1E652125D6FB006493BC /* FollowersListModel.swift */; };
 		714393CB2120F84F007C9CE4 /* OperationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714393C22120F84F007C9CE4 /* OperationProtocol.swift */; };
 		714393CC2120F84F007C9CE4 /* ResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714393C32120F84F007C9CE4 /* ResponseProtocol.swift */; };
 		714393CD2120F84F007C9CE4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714393C42120F84F007C9CE4 /* Service.swift */; };
@@ -42,6 +44,8 @@
 		711E33FA2120C3CB00455E6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7123A0FD2121DF0C00DBA08E /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		7123A0FF2122E62100DBA08E /* UsersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersManager.swift; sourceTree = "<group>"; };
+		712B1E632125D11C006493BC /* FollowersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListViewController.swift; sourceTree = "<group>"; };
+		712B1E652125D6FB006493BC /* FollowersListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListModel.swift; sourceTree = "<group>"; };
 		714393C22120F84F007C9CE4 /* OperationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationProtocol.swift; sourceTree = "<group>"; };
 		714393C32120F84F007C9CE4 /* ResponseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseProtocol.swift; sourceTree = "<group>"; };
 		714393C42120F84F007C9CE4 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			children = (
 				711E33EE2120C3CA00455E6B /* AppDelegate.swift */,
 				711E33F02120C3CA00455E6B /* UsersListViewController.swift */,
+				712B1E632125D11C006493BC /* FollowersListViewController.swift */,
 				711E33F22120C3CA00455E6B /* Main.storyboard */,
 				7123A0FD2121DF0C00DBA08E /* UserCell.swift */,
 				714393C12120F84F007C9CE4 /* Network */,
@@ -131,6 +136,7 @@
 			children = (
 				714393D421219376007C9CE4 /* User.swift */,
 				7123A0FF2122E62100DBA08E /* UsersManager.swift */,
+				712B1E652125D6FB006493BC /* FollowersListModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -303,10 +309,12 @@
 				714393D521219376007C9CE4 /* User.swift in Sources */,
 				71E08E422120F4C200E4330F /* Commons.swift in Sources */,
 				7123A0FE2121DF0C00DBA08E /* UserCell.swift in Sources */,
+				712B1E642125D11C006493BC /* FollowersListViewController.swift in Sources */,
 				714393CF2120F84F007C9CE4 /* ServiceConfiguration.swift in Sources */,
 				711E33EF2120C3CA00455E6B /* AppDelegate.swift in Sources */,
 				714393D12120F84F007C9CE4 /* Response.swift in Sources */,
 				714393D92121CF45007C9CE4 /* UsersOperations.swift in Sources */,
+				712B1E662125D6FB006493BC /* FollowersListModel.swift in Sources */,
 				71E08E432120F4C200E4330F /* Extensions.swift in Sources */,
 				714393CB2120F84F007C9CE4 /* OperationProtocol.swift in Sources */,
 				714393D02120F84F007C9CE4 /* RequestProtocol.swift in Sources */,

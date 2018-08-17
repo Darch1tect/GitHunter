@@ -18,7 +18,18 @@ public class LoadUsers: JSONOperation<[UserModel]> {
             return UserModel.load(list: json.arrayValue)
         }
     }
+}
 
+public class LoadFollowers: JSONOperation<[UserModel]> {
+    
+    public init(for userName: String) {
+        super.init()
+        let endpointString = "/users/\(userName)/followers"
+        self.request = Request(method: .get, endpoint: endpointString)
+        self.onParseResponse = { json in
+            return UserModel.load(list: json.arrayValue)
+        }
+    }
 }
 
 public class LoadImage: DataOperation<ResponseProtocol> {

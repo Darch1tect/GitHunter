@@ -12,12 +12,12 @@ import UIKit
 final class UserCell: UITableViewCell {
     
    @IBOutlet private weak var loginLabel: UILabel?
-   @IBOutlet private weak  var profileLabel: UILabel?
+   @IBOutlet private weak  var profileTextView: UITextView?
    @IBOutlet private weak  var avatarView: UIImageView?
     
     func setupWithModel(userModel: UserModel) {
         loginLabel?.text = userModel.loginUrlString
-        profileLabel?.text = userModel.profileUrlString
+        profileTextView?.text = userModel.profileUrlString
         
         let conf = ServiceConfiguration.init(name: "AvatarsCfg", base: userModel.avatarUrlString)
         let service = Service(conf!)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UsersListViewController: UIViewController {
+final class UsersListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView?
     
@@ -19,6 +19,12 @@ class UsersListViewController: UIViewController {
         
         userManager.delegate = self
         userManager.loadPage()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? FollowersListViewController {
+            destination.followersModel = FollowersListModel.init(with: userManager.selectedUser!)
+        }
     }
 
 }
@@ -47,6 +53,13 @@ extension UsersListViewController: UITableViewDelegate {
         if (indexPath.row == userManager.loadedUsers.count - 1) {
             userManager.loadPage()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.isSelected = false
+        userManager.selectedUser = userManager.loadedUsers[indexPath.row]
+        self.performSegue(withIdentifier: "followersSegue", sender: self)
     }
 }
 
