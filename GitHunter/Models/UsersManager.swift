@@ -30,7 +30,8 @@ final class UserManager {
         let cfg = ServiceConfiguration.appConfig()
         let service = Service(cfg!)
         let lastLoadedUserId = loadedUsers.last?.id ?? 0
-        _ = LoadUsers.init(since: lastLoadedUserId, perPage: 30).execute(in: service, retry: 1).done { newLoadedUsers in
+        _ = LoadUsers.init(since: lastLoadedUserId, perPage: 30).execute(in: service, retry: 1).done
+            { [unowned self] newLoadedUsers in
             self.loadedUsers += newLoadedUsers
             self.delegate?.didReceiveDataUpdate()
         }

@@ -28,7 +28,7 @@ final class FollowersListModel {
         let cfg = ServiceConfiguration.appConfig()
         let service = Service(cfg!)
         _ = LoadFollowers.init(for: user.loginUrlString).execute(in: service, retry: 1).done
-            { loadedUsers in
+            { [unowned self] loadedUsers in
                 self.usersFollowers += loadedUsers
                 print(loadedUsers)
                 self.delegate?.followersUpdated()

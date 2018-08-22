@@ -21,11 +21,10 @@ final class UserCell: UITableViewCell {
         
         let conf = ServiceConfiguration.init(name: "AvatarsCfg", base: userModel.avatarUrlString)
         let service = Service(conf!)
-        _ = LoadImage.init(from: userModel.avatarUrlString).execute(in: service, retry: 1).done(on: DispatchQueue.main, { dataResponse in
+        _ = LoadImage.init(from: userModel.avatarUrlString).execute(in: service, retry: 1).done(on: DispatchQueue.main, { [unowned self] dataResponse in
             let image = UIImage(data: dataResponse.data!)
             self.avatarView?.image = image
         })
-        
     }
     
     override func prepareForReuse() {
